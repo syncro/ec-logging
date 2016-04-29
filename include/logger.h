@@ -11,10 +11,10 @@ class Logger
 private:
 
 public:
-	virtual info(std::string message);
-	virtual debug(std::string message);
-	virtual error(std::string message);
-    virtual Logger();
+	virtual void info(std::string message);
+	virtual void debug(std::string message);
+	virtual void error(std::string message);
+    Logger();
     virtual ~Logger();
 };
 
