@@ -32,13 +32,13 @@ public:
         loggerImpl = log4cpp::Category::getRoot();
         loggerImpl.debug("logger inited");
     }
-	void info(std::string message) {
+	info(std::string message) {
 	    loggerImpl.info(message);
 	};
-	void debug(std::string message) {
+	debug(std::string message) {
         loggerImpl.debug(message);
 	};
-	void error(std::string message) {
+	error(std::string message) {
         loggerImpl.error(message);
 	};
 };

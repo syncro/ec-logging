@@ -22,20 +22,20 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
-
-add_library(${PROJECT_NAME} INTERFACE)
-
-
-target_include_directories(
-    ${PROJECT_NAME}
-    INTERFACE
-    "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>"
-    "$<INSTALL_INTERFACE:include>"
+set(PROJECT_SRCS
+${PROJECT_SOURCE_DIR}/main.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} INTERFACE ${CONAN_LIBS})
+include_directories("${PROJECT_INCLUDE_DIR}")
+include_directories("${PROJECT_SOURCE_DIR}")
+include_directories("${PROJECT_BINARY_DIR}")
 
-target_compile_features(${PROJECT_NAME} INTERFACE cxx_range_for)
+
+add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
+
+target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
+
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_range_for)
 
 if(BUILD_TEST)
 	add_executable(run_test src/test.cpp)
