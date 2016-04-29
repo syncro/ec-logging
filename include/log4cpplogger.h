@@ -31,13 +31,15 @@ public:
         }
         loggerImpl.debug("logger inited");
     }
-	void info(std::string message) {
+    virtual ~Log4cppLogger() {}
+    
+	virtual void info(std::string message) {
 	    loggerImpl.info(message);
 	};
-	void debug(std::string message) {
+	virtual void debug(std::string message) {
         loggerImpl.debug(message);
 	};
-	void error(std::string message) {
+	virtual void error(std::string message) {
         loggerImpl.error(message);
 	};
 };
