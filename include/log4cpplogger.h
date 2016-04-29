@@ -3,11 +3,11 @@
 
 #include <iostream>
 
-#include "logger.h"
+//#include "logger.h"
 #include "log4cpp/Category.hh"
 #include "log4cpp/PropertyConfigurator.hh"
 
-class Log4cppLogger : public Logger
+class Log4cppLogger
 {
 private:
     log4cpp::Category& loggerImpl = log4cpp::Category::getRoot();
