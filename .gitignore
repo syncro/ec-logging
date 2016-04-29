@@ -1,0 +1,12 @@
+.idea
+*.iml
+bin
+build
+CMakeFiles
+CMakeLists.txt.*
+CMakeCache.txt
+cmake_install.cmake
+conanbuildinfo.cmake
+conaninfo.txt
+*.cbp
+Makefile

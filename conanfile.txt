@@ -1,0 +1,6 @@
+[requires]
+gtest/1.7.0@lasote/stable
+log4cpp/master@syncro/testing
+
+[generators]
+cmake
