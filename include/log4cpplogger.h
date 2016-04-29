@@ -10,7 +10,7 @@
 class Log4cppLogger : public Logger
 {
 private:
-    log4cpp::Category &loggerImpl;
+    log4cpp::Category& loggerImpl = log4cpp::Category::getRoot();
 
 public:
     Log4cppLogger() {
@@ -29,7 +29,6 @@ public:
 
             exit(1);
         }
-        loggerImpl = log4cpp::Category::getRoot();
         loggerImpl.debug("logger inited");
     }
 	info(std::string message) {
