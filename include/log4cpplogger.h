@@ -1,5 +1,5 @@
-#ifndef LOGGER
-#define LOGGER
+#ifndef LOG4CPPLOGGER_H
+#define LOG4CPPLOGGER_H
 
 #include <iostream>
 
@@ -9,7 +9,7 @@
 class Log4cppLogger : public Logger
 {
 private:
-    log4cpp::Category &logerImpl;
+    log4cpp::Category* loggerImpl;
 
 public:
     Log4cppLogger() {
@@ -28,17 +28,17 @@ public:
 
             exit(1);
         }
-        log4cpp::Category &logerImpl = log4cpp::Category::getRoot();
-        logerImpl.debug("logger inited");
+        loggerImpl = log4cpp::Category::getRoot();
+        loggerImpl.debug("logger inited");
     }
 	void info(std::string message) {
-	    logerImpl.info(message);
+	    loggerImpl.info(message);
 	};
 	void debug(std::string message) {
-        logerImpl.debug(message);
+        loggerImpl.debug(message);
 	};
 	void error(std::string message) {
-        logerImpl.error(message);
+        loggerImpl.error(message);
 	};
 };
 
