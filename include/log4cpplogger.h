@@ -10,7 +10,7 @@
 class Log4cppLogger : public Logger
 {
 private:
-    log4cpp::Category loggerImpl;
+    log4cpp::Category &loggerImpl;
 
 public:
     Log4cppLogger() {
