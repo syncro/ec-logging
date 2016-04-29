@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-#include "logger.h"
+#include "log4cpplogger.h"
 
 
 class LoggerFactory
@@ -12,8 +12,8 @@ private:
 
 public:
 	virtual ~LoggerFactory();
-	Logger* getLogger(std::string indent) {
-	    Logger* logger = new Log4cppLogger();
+	static Log4cppLogger* getLogger(std::string indent) {
+	    Log4cppLogger* logger = new Log4cppLogger();
         return logger;
 	}
 };

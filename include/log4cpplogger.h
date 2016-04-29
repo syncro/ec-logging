@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-
+#include "logger.h"
 
 
 class Log4cppLogger : public Logger
@@ -12,7 +12,7 @@ private:
     log4cpp::Category &logerImpl;
 
 public:
-    Logger() {
+    Log4cppLogger() {
         const char *file_log4cpp_init = "log4cpp.properties";
         try
         {
