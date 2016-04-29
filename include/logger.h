@@ -14,7 +14,6 @@ public:
 	virtual void info(std::string message);
 	virtual void debug(std::string message);
 	virtual void error(std::string message);
-    Logger() {};
     virtual ~Logger();
 };
 
