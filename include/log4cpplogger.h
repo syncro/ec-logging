@@ -4,7 +4,8 @@
 #include <iostream>
 
 #include "logger.h"
-
+#include "log4cpp/Category.hh"
+#include "log4cpp/PropertyConfigurator.hh"
 
 class Log4cppLogger : public Logger
 {
