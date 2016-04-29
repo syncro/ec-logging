@@ -31,13 +31,13 @@ public:
         }
         loggerImpl.debug("logger inited");
     }
-	info(std::string message) {
+	void info(std::string message) {
 	    loggerImpl.info(message);
 	};
-	debug(std::string message) {
+	void debug(std::string message) {
         loggerImpl.debug(message);
 	};
-	error(std::string message) {
+	void error(std::string message) {
         loggerImpl.error(message);
 	};
 };
