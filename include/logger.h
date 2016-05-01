@@ -18,13 +18,13 @@ public:
         delete loggerImpl;
     }
 	void info(std::string message) {
-	    loggerImpl.info(message);
+	    loggerImpl->info(message);
 	};
 	void debug(std::string message) {
-        loggerImpl.debug(message);
+        loggerImpl->debug(message);
 	};
 	void error(std::string message) {
-        loggerImpl.error(message);
+        loggerImpl->error(message);
 	};
 };
 };
