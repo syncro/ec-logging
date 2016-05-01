@@ -12,8 +12,8 @@ private:
 
 public:
 	virtual ~LoggerFactory();
-	static Log4cppLogger* getLogger(std::string indent) {
-	    Log4cppLogger* logger = new Log4cppLogger();
+	static Logger* getLogger(std::string indent) {
+	    Logger* logger = new Logger();
         return logger;
 	}
 };

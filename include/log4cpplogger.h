@@ -7,10 +7,10 @@
 #include "log4cpp/Category.hh"
 #include "log4cpp/PropertyConfigurator.hh"
 
-class Log4cppLogger
+class Log4cppLogger : public LoggerImpl
 {
 private:
-    log4cpp::Category& loggerImpl = log4cpp::Category::getRoot();
+    log4cpp::Category& rootLogger = log4cpp::Category::getRoot();
 
 public:
     Log4cppLogger() {
@@ -29,18 +29,20 @@ public:
 
             exit(1);
         }
-        loggerImpl.debug("logger inited");
+        rootLogger.debug("logger inited");
     }
-    virtual ~Log4cppLogger() {}
-    
-	virtual void info(std::string message) {
-	    loggerImpl.info(message);
+    ~Log4cppLogger() {
+        delete rootLogger;
+    }
+
+	void info(std::string message) {
+	    rootLogger.info(message);
 	};
-	virtual void debug(std::string message) {
-        loggerImpl.debug(message);
+	void debug(std::string message) {
+        rootLogger.debug(message);
 	};
-	virtual void error(std::string message) {
-        loggerImpl.error(message);
+	void error(std::string message) {
+        rootLogger.error(message);
 	};
 };
 
