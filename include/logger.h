@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-
+#include "loggerimpl.h"
 
 
 class Logger
