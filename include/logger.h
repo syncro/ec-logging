@@ -3,13 +3,13 @@
 
 #include <iostream>
 
-#include "loggerimpl.h"
+#include "log4cpplogger.h"
 
 
 class Logger
 {
 private:
-    LoggerImpl* loggerImpl;
+    Log4cppLogger* loggerImpl;
 public:
     Logger() {
         loggerImpl = new Log4cppLogger();
