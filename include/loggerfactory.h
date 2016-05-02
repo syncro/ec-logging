@@ -4,7 +4,7 @@
 #include <iostream>
 #include "logger.h"
 #include "log4cpplogger.h"
-//typedef Logger<Log4cppLogger> ConcreteLogger;
+typedef Logger<Log4cppLogger> ConcreteLogger;
 
 
 
