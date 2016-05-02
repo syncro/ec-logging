@@ -6,6 +6,7 @@
 //#include "logger.h"
 #include "log4cpp/Category.hh"
 #include "log4cpp/PropertyConfigurator.hh"
+#include "loggerimpl.h"
 
 class Log4cppLogger : public LoggerImpl
 {
