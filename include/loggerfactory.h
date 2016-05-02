@@ -6,6 +6,8 @@
 #include "log4cpplogger.h"
 #include "logger.h"
 
+typedef Logger<Log4cppLogger> ConcreteLogger;
+
 class LoggerFactory
 {
 private:
@@ -13,7 +15,7 @@ private:
 public:
 	virtual ~LoggerFactory();
 	static LoggerImpl* getLogger(std::string ident) {
-	    LoggerImpl* logger = new LoggerImpl();
+	    LoggerImpl* logger = new ConcreteLogger();
         return logger;
 	}
 };
