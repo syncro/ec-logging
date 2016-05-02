@@ -36,13 +36,13 @@ public:
         //delete *rootLogger;
     }
 
-	void info(std::string message) {
+	virtual void info(std::string message) {
 	    rootLogger.info(message);
 	};
-	void debug(std::string message) {
+	virtual void debug(std::string message) {
         rootLogger.debug(message);
 	};
-	void error(std::string message) {
+	virtual void error(std::string message) {
         rootLogger.error(message);
 	};
 };
