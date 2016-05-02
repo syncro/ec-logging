@@ -33,7 +33,7 @@ public:
         rootLogger.debug("logger inited");
     }
     ~Log4cppLogger() {
-        delete rootLogger;
+        delete *rootLogger;
     }
 
 	void info(std::string message) {

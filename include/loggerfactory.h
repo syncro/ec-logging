@@ -6,15 +6,16 @@
 #include "log4cpplogger.h"
 #include "logger.h"
 
+Logger<Log4cppLogger> LoggerImpl;
+
 class LoggerFactory
 {
 private:
 
 public:
 	virtual ~LoggerFactory();
-	static Logger* getLogger(std::string indent) {
-	    Logger<Log4cppLogger> LoggerImpl;
-	    Logger* logger = new LoggerImpl();
+	static LoggerImpl* getLogger(std::string indent) {
+	    LoggerImpl* logger = new LoggerImpl();
         return logger;
 	}
 };
