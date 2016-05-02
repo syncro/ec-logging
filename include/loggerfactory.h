@@ -2,9 +2,10 @@
 #define LOGGERFACTORY_H
 
 #include <iostream>
+#include "logger.h"
 typedef Logger<Log4cppLogger> ConcreteLogger;
 #include "log4cpplogger.h"
-#include "logger.h"
+
 
 
 class LoggerFactory
