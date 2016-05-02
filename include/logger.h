@@ -3,16 +3,14 @@
 
 #include <iostream>
 
-#include "log4cpplogger.h"
-
-
+template<typename T>
 class Logger
 {
 private:
-    Log4cppLogger* loggerImpl;
+    T* loggerImpl;
 public:
     Logger() {
-        loggerImpl = new Log4cppLogger();
+        loggerImpl = new T();
     }
     ~Logger() {
         delete loggerImpl;
@@ -26,7 +24,7 @@ public:
 	void error(std::string message) {
         loggerImpl->error(message);
 	};
-};
+
 };
 
 

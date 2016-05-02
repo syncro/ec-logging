@@ -13,7 +13,8 @@ private:
 public:
 	virtual ~LoggerFactory();
 	static Logger* getLogger(std::string indent) {
-	    Logger* logger = new Logger();
+	    Logger<Log4cppLogger> LoggerImpl;
+	    Logger* logger = new LoggerImpl();
         return logger;
 	}
 };
