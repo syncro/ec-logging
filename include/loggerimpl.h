@@ -6,9 +6,9 @@
 
 class LoggerImpl
 {
-	virtual void info(std::string message) const = 0;
-	virtual void debug(std::string message) const = 0;
-	virtual void error(std::string message) const = 0;
+	void info(std::string message) {};
+	void debug(std::string message) {};
+	void error(std::string message) {};
 };
 
 
