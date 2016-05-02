@@ -4,7 +4,7 @@
 #include <iostream>
 
 #include "log4cpplogger.h"
-
+#include "logger.h"
 
 class LoggerFactory
 {

@@ -13,7 +13,7 @@ public:
         loggerImpl = new T();
     }
     ~Logger() {
-        delete loggerImpl;
+        delete *loggerImpl;
     }
 	void info(std::string message) {
 	    loggerImpl->info(message);

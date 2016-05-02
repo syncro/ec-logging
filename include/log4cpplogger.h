@@ -48,6 +48,6 @@ public:
 
 
 
-#endif // Logger.h
+#endif // log4cpplogger.h
 
 
