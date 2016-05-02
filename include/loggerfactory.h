@@ -6,8 +6,6 @@
 #include "log4cpplogger.h"
 #include "logger.h"
 
-typedef Logger<Log4cppLogger> LoggerImpl;
-
 class LoggerFactory
 {
 private:
